@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Resources/heatMapGradTexture.tres" type="Texture" id=1]
+
+[node name="heatMapGradTexture" type="Sprite"]
+scale = Vector2( 12.2762, 60.275 )
+texture = ExtResource( 1 )

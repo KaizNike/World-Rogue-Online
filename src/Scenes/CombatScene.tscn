@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Scenes/CombatScene.gd" type="Script" id=1]
+[ext_resource path="res://src/World/Tiles/OverWorld.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Outlines.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Outlines.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 8, 8 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="CombatScene" type="Node"]
+script = ExtResource( 1 )
+
+[node name="SceneTiles" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 1
+format = 1
+
+[node name="OutlineTiles" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 1
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]

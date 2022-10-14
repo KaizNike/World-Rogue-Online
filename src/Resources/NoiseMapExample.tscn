@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Resources/NoiseMapExample.tres" type="Texture" id=1]
+
+[node name="NoiseMapExample" type="TextureRect"]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
